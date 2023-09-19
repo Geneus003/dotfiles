@@ -35,4 +35,5 @@ require('plugins.toggleterm')
 -- LiveServer
 require('plugins.liveserver')
 
+-- RustTools
 require('plugins.rusttools')
