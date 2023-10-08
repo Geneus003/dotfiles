@@ -36,6 +36,8 @@ require("catppuccin").setup({
     },
     custom_highlights = {},
     integrations = {
+		cmp = true,
+		treesitter = true,
     },
 })
 

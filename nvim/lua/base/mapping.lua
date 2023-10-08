@@ -39,3 +39,4 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 vim.keymap.set('n', '<leader>T', ':ToggleTerm<CR>')
 
 vim.keymap.set('n', '<leader>rr', ':RustRunnables<CR>')
+vim.keymap.set('n', '<leader>xx', ':TroubleToggle<CR>')

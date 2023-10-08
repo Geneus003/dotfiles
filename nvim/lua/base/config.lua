@@ -1,4 +1,4 @@
--- Linu numbers
+-- Number
 vim.opt.number = true
 vim.opt.relativenumber = true
 

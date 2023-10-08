@@ -1,4 +1,3 @@
--- by monkey
 -- main modules connection
 require('base.config')
 require('base.plugins')
@@ -11,6 +10,7 @@ require('plugins.lsp_servers')
 require('plugins.rust_analyzer')
 require('plugins.cmp')
 require('plugins.illuminate')
+require('plugins.trouble')
 
 -- Themes
 require('plugins.catpuccin')
@@ -36,5 +36,4 @@ require('plugins.toggleterm')
 -- LiveServer
 require('plugins.liveserver')
 
--- RustTools
 require('plugins.rusttools')
