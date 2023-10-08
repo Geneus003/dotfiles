@@ -36,6 +36,7 @@ mapping = cmp.mapping.preset.insert({
   end, {'i', 's'})
 }),
 sources = cmp.config.sources({
+  { name = 'path' },
   { name = 'nvim_lsp' },
   { name = 'vsnip' }, -- For vsnip users.
   -- { name = 'luasnip' }, -- For luasnip users.
