@@ -1,4 +1,4 @@
--- main modules connection
+-- Main modules connection
 require('base.config')
 require('base.plugins')
 require('base.mapping')
@@ -14,6 +14,7 @@ require('plugins.trouble')
 
 -- Themes
 require('plugins.catpuccin')
+require('plugins.web_devicons')
 
 -- NeoTree
 require('plugins.neotree')
@@ -29,6 +30,7 @@ require('plugins.telescope')
 
 -- Typing Addons
 require('plugins.autopairs')
+require('plugins.comment')
 
 -- Terminal
 require('plugins.toggleterm')
@@ -36,4 +38,5 @@ require('plugins.toggleterm')
 -- LiveServer
 require('plugins.liveserver')
 
+-- Rust
 require('plugins.rusttools')

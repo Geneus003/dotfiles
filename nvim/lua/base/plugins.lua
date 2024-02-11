@@ -28,12 +28,6 @@ require("lazy").setup({
 			"s1n7ax/nvim-window-picker"
 		}
 	},
-
-	{
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
-        dependencies = { 'nvim-lua/plenary.nvim' }
-    },
-
 	{'nvim-treesitter/nvim-treesitter'},
 
 	{
@@ -42,12 +36,18 @@ require("lazy").setup({
     },
 
 	{
-        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        'nvim-telescope/telescope.nvim', branch = '0.1.x',
         dependencies = { 'nvim-lua/plenary.nvim' }
     }, 
 
 	{'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
 
+	{
+		"williamboman/mason.nvim"
+	},
+	{
+		"williamboman/mason-lspconfig.nvim"
+	},
 	{'neovim/nvim-lspconfig'},
 	
 	{'hrsh7th/cmp-nvim-lsp'},
@@ -84,9 +84,6 @@ require("lazy").setup({
         config = true
     },
 	{
-		"williamboman/mason.nvim"
-	},
-	{
 		{'simrat39/rust-tools.nvim'},
 		{'nvim-lua/plenary.nvim'},
 		{'mfussenegger/nvim-dap'},
@@ -95,6 +92,15 @@ require("lazy").setup({
 		"folke/trouble.nvim",
 		 dependencies = { "nvim-tree/nvim-web-devicons" },
 	},
-	
-
+	{
+		'numToStr/Comment.nvim',
+		opts = {},
+		lazy = false,
+	},
+	{
+		"iamcco/markdown-preview.nvim",
+		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+		ft = { "markdown" },
+		build = function() vim.fn["mkdp#util#install"]() end,
+	},
 })
