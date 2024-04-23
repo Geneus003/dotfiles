@@ -20,7 +20,11 @@ require('lualine').setup {
   sections = {
     lualine_a = {'tabs', 'mode'},
     lualine_b = {'branch', 'diff', 'diagnostics'},
-    lualine_c = {'filename', 'filesize'},
+    lualine_c = {'filename', 'filesize',
+		function()
+			return require('lsp-progress').progress()
+		end,
+	},
     lualine_x = {'encoding', 'fileformat', 'filetype'},
     lualine_y = {'progress', 'searchcount'},
     lualine_z = {'location'}
@@ -38,4 +42,11 @@ require('lualine').setup {
   inactive_winbar = {},
   extensions = {}
 }
+
+vim.api.nvim_create_augroup("lualine_augroup", { clear = true })
+vim.api.nvim_create_autocmd("User", {
+  group = "lualine_augroup",
+  pattern = "LspProgressStatusUpdated",
+  callback = require("lualine").refresh,
+})
 

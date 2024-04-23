@@ -45,7 +45,6 @@ require("lazy").setup({
 		{'SmiteshP/nvim-navbuddy'},
 		{'hedyhli/outline.nvim'},
 		{'aznhe21/actions-preview.nvim'},
-
 		{
 		  "folke/trouble.nvim",
 		  branch = "dev",
@@ -64,5 +63,19 @@ require("lazy").setup({
 		},
 
 		{'mrcjkb/rustaceanvim', lazy=false},
+		{
+			'windwp/nvim-autopairs',
+			event = "InsertEnter",
+			config = true
+		},
+
+		{
+			'numToStr/Comment.nvim',
+			opts = {},
+			lazy = false,
+		},
+
+		{'linrongbin16/lsp-progress.nvim'},
+
 	},
 })

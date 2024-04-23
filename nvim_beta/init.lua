@@ -26,9 +26,11 @@ require("plugins.actions_prew")
 -- Errors, troubles
 require("plugins.trouble")
 
+require("plugins.lsp_prog")
 require("plugins.neotree")
 require("plugins.lualine")
 require("plugins.buffline")
+require("plugins.comment")
 
 -- Theme
 require("plugins.catpucchin")

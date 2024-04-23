@@ -15,12 +15,16 @@ vim.fn.sign_define("DiagnosticSignHint",
 -- in the form "LspDiagnosticsSignWarning"
 
 require("neo-tree").setup({
+	close_if_last_window = true,
 	filesystem = {
 		filtered_items = {
 			  visible = true, -- This is what you want: If you set this to `true`, all "hide" just mean "dimmed out"
 			  hide_dotfiles = false,
 			  hide_gitignored = false,
 		},
+		follow_current_file = {
+            enabled = true,
+		}
 	},
 	window = {
 		position = "left",

@@ -32,3 +32,4 @@ vim.api.nvim_create_autocmd('LspAttach', {
 lspconfig["pyright"].setup({})
 -- lspconfig["rust_analyzer"].setup({})
 lspconfig["slint_lsp"].setup({})
+lspconfig["lua_ls"].setup({})
